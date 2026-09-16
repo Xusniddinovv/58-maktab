@@ -34,11 +34,18 @@ a {
 /* ================================
    HEADER
 ================================ */
+.top-background {
+    background-image: url("Maktab.png");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    min-height: 1000px;
+}
 
 .header {
     width: 100%;
-    background: rgba(255, 255, 255, 0.97);
-    border-bottom: 1px solid #e8ecf3;
+    background: rgba(10, 25, 50, 0.20);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -110,10 +117,6 @@ nav a:hover {
     display: flex;
     align-items: center;
 
-    background-image: url("Maktab.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 .hero-overlay {
