@@ -141,7 +141,7 @@ nav a:hover {
     line-height: 1;
     margin-bottom: 8px;
     letter-spacing: -3px;
-    transform: translateY(-250px);
+    transform: translateY(-150px);
 }
 
 .hero p {
@@ -152,7 +152,7 @@ nav a:hover {
     font-size: 28px;
     max-width: 600px;
     margin-bottom: 75px;
-    transform: translateY(-240px);
+    transform: translateY(-180px);
 }
 
 .hero-label {
@@ -1025,4 +1025,37 @@ nav a:hover {
     text-shadow:
         0 0 8px rgba(255, 255, 255, 0.7),
         0 0 20px rgba(90, 150, 255, 0.6);
+}
+/* ================================
+   TELEFON UCHUN HERO
+================================ */
+
+@media (max-width: 700px) {
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero h1 {
+        font-size: clamp(45px, 14vw, 65px);
+        letter-spacing: -2px;
+        transform: translateY(-70px);
+        margin-bottom: 5px;
+    }
+
+    .hero p {
+        font-size: 21px;
+        max-width: 90%;
+        margin-bottom: 55px;
+        transform: translateY(-80px);
+    }
+
+    .hero-label {
+        font-size: 24px;
+        transform: translateY(-20px);
+    }
+
+    .hero-buttons {
+        transform: translateY(-20px);
+    }
 }
