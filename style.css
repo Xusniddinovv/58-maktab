@@ -744,4 +744,104 @@ nav a:hover {
         padding: 25px;
     }
 }
-```
+.site-creator {
+    position: relative;
+    text-align: center;
+    padding: 28px 15px 30px;
+    background: #070b14;
+    color: rgba(255, 255, 255, 0.42);
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+/* Yuqoridagi premium chiziq */
+.site-creator::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 140px;
+    height: 1px;
+    transform: translateX(-50%);
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.7),
+        transparent
+    );
+}
+
+/* Pastdagi glow */
+.site-creator::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -35px;
+    width: 180px;
+    height: 70px;
+    transform: translateX(-50%);
+    background: rgba(80, 140, 255, 0.18);
+    filter: blur(35px);
+    border-radius: 50%;
+}
+
+.site-creator {
+    position: relative;
+    text-align: center;
+    padding: 18px 10px 20px;
+    background: #070b14;
+    color: rgba(255, 255, 255, 0.45);
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.site-creator {
+    text-align: center;
+    padding: 18px 10px 20px;
+    background: #070b14;
+    color: rgba(255, 255, 255, 0.45);
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.site-creator strong {
+    display: inline-block;
+    color: white;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    transition: all 0.25s ease;
+}
+
+.site-creator:hover {
+    /* umumiy joy kattalashmaydi */
+}
+
+.site-creator strong:hover {
+    transform: scale(1.25);
+    text-shadow:
+        0 0 8px rgba(255, 255, 255, 0.7),
+        0 0 20px rgba(90, 150, 255, 0.6);
+}
+.site-creator span {
+    display: inline-block;
+    transition: all 0.25s ease;
+}
+
+.site-creator span:hover {
+    transform: scale(1.25);
+    color: white;
+    text-shadow:
+        0 0 8px rgba(255, 255, 255, 0.7),
+        0 0 20px rgba(90, 150, 255, 0.6);
+}
