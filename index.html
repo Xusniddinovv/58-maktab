@@ -41,6 +41,17 @@
     <!-- HERO -->
     <section id="home" class="hero">
         <div class="hero-overlay"></div>
+        <script>
+window.addEventListener("scroll", () => {
+    const bg = document.querySelector(".top-background");
+    if (!bg) return;
+
+    const scrollY = window.scrollY;
+    const zoom = 100 + Math.min(scrollY * 0.035, 35);
+
+    bg.style.backgroundSize = `${zoom}% auto`;
+});
+</script>
 
         <div class="container hero-content">
             <span class="hero-label">Xush kelibsiz!</span>
@@ -509,7 +520,7 @@
                 <strong>Shaymardanova Meruert</strong>
                 <span>Boshlang'ich ta'lim fani o‘qituvchisi</span> 
                 </div>   
-                 
+
                
             <div class="teacher-modal-item">
                 <strong>Soyibova Dilovar</strong>
