@@ -1,747 +1,572 @@
-```css
-/* ================================
-   UMUMIY
-================================ */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #172033;
-    background: #ffffff;
-    line-height: 1.6;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.container {
-    width: min(1150px, 92%);
-    margin: auto;
-}
-
-
-/* ================================
-   HEADER
-================================ */
-
-.header {
-    width: 100%;
-    background: rgba(255, 255, 255, 0.97);
-    border-bottom: 1px solid #e8ecf3;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.nav {
-    min-height: 78px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.logo-icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 14px;
-    background: linear-gradient(135deg, #1769e0, #4c9aff);
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    font-weight: 800;
-}
-
-.logo h2 {
-    font-size: 18px;
-    color: #102a56;
-}
-
-.logo span {
-    display: block;
-    color: #7a8495;
-    font-size: 11px;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-}
-
-nav a {
-    color: #354052;
-    font-size: 14px;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: #1769e0;
-}
-
-
-/* ================================
-   HERO
-================================ */
-
-.hero {
-    min-height: 620px;
-    position: relative;
-    display: flex;
-    align-items: center;
-
-    background-image: url("Maktab.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-
-    background:
-        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.14), transparent 30%),
-        radial-gradient(circle at 20% 80%, rgba(255,255,255,0.10), transparent 30%);
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-/* 58-MAKTAB tepada */
-.hero h1 {
-    order: 1;
-    font-size: clamp(50px, 8vw, 92px);
-    line-height: 1;
-    margin-bottom: 8px;
-    letter-spacing: -3px;
-    transform: translateY(-40px);
-}
-
-/* Bilim yozuvi 58-MAKTAB tagida */
-.hero p {
-    order: 2;
-    font-family: "Brush Script MT", "Segoe Script", cursive;
-    font-weight: 700;
-    color: white;
-    font-size: 28px;
-    max-width: 600px;
-    margin-bottom: 75px;
-    transform: translateY(-70px);
-}
-
-/* Xush kelibsiz pastroqda va kattaroq */
-.hero-label {
-    order: 3;
-    display: inline-block;
-    padding: 7px 16px;
-    border-radius: 50px;
-    background: rgba(255,255,255,0.15);
-    border: 1px solid rgba(255,255,255,0.2);
-    margin-bottom: 20px;
-    font-size: 32px;
-    font-weight: 700;
-}
-
-/* Tugmalar */
-.hero-buttons {
-    order: 4;
-    display: flex;
-    gap: 14px;
-    flex-wrap: wrap;
-}
-
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 13px 24px;
-    border-radius: 10px;
-    font-weight: 700;
-    transition: 0.3s;
-}
-
-.btn.primary {
-    background: #ffffff;
-    color: #1260c6;
-}
-
-.btn.primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
-.btn.secondary {
-    color: white;
-    border: 1px solid rgba(255,255,255,0.5);
-}
-
-.btn.secondary:hover {
-    background: white;
-    color: #1260c6;
-}
-
-
-/* ================================
-   SECTION
-================================ */
-
-.section {
-    padding: 100px 0;
-}
-
-.section.light {
-    background: #f5f8fc;
-}
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>58-MAKTAB | Umumiy o‘rta ta’lim maktabi</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container nav">
+
+            <div class="logo">
+                <div class="logo-icon">58</div>
+                <div>
+                    <h2>58-MAKTAB</h2>
+                    <span>Umumiy o‘rta ta’lim maktabi</span>
+                </div>
+            </div>
+
+            <nav>
+                <a href="#home">Bosh sahifa</a>
+                <a href="#about">Maktab haqida</a>
+                <a href="#news">Yangiliklar</a>
+                <a href="#teachers">O‘qituvchilar</a>
+                <a href="#gallery">Galereya</a>
+                <a href="#contact">Bog‘lanish</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+
+        <div class="container hero-content">
+            <span class="hero-label">Xush kelibsiz!</span>
+
+            <h1>
+                58-MAKTAB
+            </h1>
+
+            <p>
+                Bilim, tarbiya va kelajak sari birgalikda!
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#about" class="btn primary">Maktab haqida</a>
+                <a href="#contact" class="btn secondary">Bog‘lanish</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ABOUT -->
+    <!-- ABOUT -->
+<section id="about" class="section">
+    <div class="container">
+
+        <div class="section-title">
+            <span>Biz haqimizda</span>
+            <h2>58-MAKTAB</h2>
+            <p>Zamonaviy ta'lim va yuqori natijalar sari</p>
+        </div>
+
+        <div class="about-grid">
+
+            <div class="about-text">
+                <h3>Bizning maktabimiz</h3>
+
+                <p>
+                    58-sonli umumiy o‘rta ta’lim maktabi o‘quvchilarga
+                    sifatli ta’lim berish, ularning bilim va ko‘nikmalarini
+                    rivojlantirishga xizmat qiladi.
+                </p>
+
+                <p>
+                    Maktabimizda tajribali o‘qituvchilar, zamonaviy ta’lim
+                    metodlari va o‘quvchilar uchun qulay sharoitlar mavjud.
+                </p>
+
+                <a href="#contact" class="btn primary">
+                    Batafsil ma'lumot
+                </a>
+            </div>
+
+            <div class="about-cards">
+
+                <div class="info-card">
+                    <div class="card-icon">🎓</div>
+                    <h3>Sifatli ta'lim</h3>
+                    <p>Zamonaviy va samarali ta'lim usullari.</p>
+                </div>
+
+                <div class="info-card teacher-card-click" onclick="openTeacherModal()">
+                    <div class="card-icon">👨‍🏫</div>
+                    <h3>Tajribali ustozlar</h3>
+                    <p>Malakali va fidoyi o‘qituvchilar.</p>
+                </div>
 
-.section-title {
-    text-align: center;
-    max-width: 650px;
-    margin: 0 auto 55px;
-}
-
-.section-title span {
-    color: #1769e0;
-    font-size: 14px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.section-title h2 {
-    font-size: 38px;
-    margin: 8px 0;
-    color: #13284c;
-}
-
-.section-title p {
-    color: #7b8798;
-}
-
-
-/* ================================
-   ABOUT
-================================ */
-
-.about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 60px;
-    align-items: center;
-}
-
-.about-text h3 {
-    font-size: 30px;
-    margin-bottom: 20px;
-}
-
-.about-text p {
-    color: #697588;
-    margin-bottom: 18px;
-}
+                <div class="info-card">
+                    <div class="card-icon">🏆</div>
+                    <h3>Yutuqlar</h3>
+                    <p>O‘quvchilarimizning yuqori natijalari.</p>
+                </div>
 
-.about-text .btn {
-    margin-top: 15px;
-    background: #1769e0;
-    color: white;
-}
-
-.about-cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 18px;
-    align-items: start;
-    align-content: start;
-    grid-auto-rows: max-content;
-}
-
-.info-card {
-    padding: 30px;
-    border-radius: 18px;
-    background: white;
-    border: 1px solid #e7ecf3;
-    transition: 0.3s;
-    box-sizing: border-box;
-}
-
-.info-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 15px 35px rgba(20,60,110,0.10);
-}
-
-.card-icon {
-    font-size: 32px;
-    margin-bottom: 15px;
-}
+                <div class="info-card">
+                    <div class="card-icon">📚</div>
+                    <h3>Rivojlanish</h3>
+                    <p>Har bir o‘quvchining kelajagi uchun imkoniyat.</p>
+                </div>
 
-.info-card h3 {
-    margin-bottom: 8px;
-}
+            </div>
 
-.info-card p {
-    color: #7b8798;
-    font-size: 14px;
-}
+        </div>
 
+    </div>
+</section>
 
-/* ================================
-   STATISTICS
-================================ */
 
-.stats {
-    padding: 55px 0;
-    background: #102f61;
-    color: white;
-}
+    <!-- STATISTICS -->
+    <section class="stats">
+        <div class="container stats-grid">
 
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    text-align: center;
-}
+            <div class="stat">
+                <strong>58</strong>
+                <span>Maktab raqami</span>
+            </div>
 
-.stat {
-    border-right: 1px solid rgba(255,255,255,0.15);
-}
+            <div class="stat">
+                <strong>500+</strong>
+                <span>O‘quvchilar</span>
+            </div>
 
-.stat:last-child {
-    border-right: none;
-}
+            <div class="stat">
+                <strong>30+</strong>
+                <span>O‘qituvchilar</span>
+            </div>
 
-.stat strong {
-    display: block;
-    font-size: 38px;
-}
+            <div class="stat">
+                <strong>20+</strong>
+                <span>Yillik tajriba</span>
+            </div>
 
-.stat span {
-    color: #bdd5f4;
-    font-size: 14px;
-}
+        </div>
+    </section>
 
 
-/* ================================
-   NEWS
-================================ */
+    <!-- NEWS -->
+    <section id="news" class="section light">
+        <div class="container">
 
-.news-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
+            <div class="section-title">
+                <span>So‘nggi yangiliklar</span>
+                <h2>Maktab yangiliklari</h2>
+                <p>
+                    Maktabimizdagi eng so‘nggi voqealar
+                </p>
+            </div>
 
-.news-card {
-    background: white;
-    border-radius: 18px;
-    overflow: hidden;
-    border: 1px solid #e5eaf1;
-    transition: 0.3s;
-}
+            <div class="news-grid">
 
-.news-card:hover {
-    transform: translateY(-7px);
-    box-shadow: 0 18px 40px rgba(30,70,120,0.12);
-}
+                <article class="news-card">
+                    <div class="news-image">
+                        🏫
+                    </div>
 
-.news-image {
-    height: 190px;
-    background: linear-gradient(135deg, #1769e0, #65a8ff);
-    color: white;
-    font-size: 65px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+                    <div class="news-content">
+                        <span class="date">16.09.2026</span>
 
-.news-content {
-    padding: 25px;
-}
+                        <h3>
+                            Yangi o‘quv yili boshlandi
+                        </h3>
 
-.date {
-    color: #1769e0;
-    font-size: 12px;
-    font-weight: 700;
-}
+                        <p>
+                            Maktabimizda yangi o‘quv yiliga bag‘ishlangan
+                            tadbir bo‘lib o‘tdi.
+                        </p>
 
-.news-content h3 {
-    margin: 10px 0;
-}
+                        <a href="#">Batafsil →</a>
+                    </div>
+                </article>
 
-.news-content p {
-    color: #768195;
-    font-size: 14px;
-    margin-bottom: 15px;
-}
 
-.news-content a {
-    color: #1769e0;
-    font-weight: 700;
-}
+                <article class="news-card">
+                    <div class="news-image">
+                        🏆
+                    </div>
 
+                    <div class="news-content">
+                        <span class="date">10.09.2026</span>
 
-/* ================================
-   TEACHERS
-================================ */
+                        <h3>
+                            O‘quvchilarimiz yangi yutuqlarga erishdi
+                        </h3>
 
-.teachers-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 22px;
-}
+                        <p>
+                            Maktab o‘quvchilari turli fan olimpiadalarida
+                            faol ishtirok etdilar.
+                        </p>
 
-.teacher-card {
-    text-align: center;
-    background: #fff;
-    padding: 20px;
-    border-radius: 18px;
-    border: 1px solid #e5eaf1;
-    transition: 0.3s;
-}
+                        <a href="#">Batafsil →</a>
+                    </div>
+                </article>
 
-.teacher-card:hover {
-    transform: translateY(-6px);
-}
 
-.teacher-photo {
-    height: 180px;
-    border-radius: 14px;
-    background: #eaf2ff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 65px;
-    margin-bottom: 18px;
-}
+                <article class="news-card">
+                    <div class="news-image">
+                        📚
+                    </div>
 
-.teacher-card p {
-    color: #788396;
-    font-size: 14px;
-}
+                    <div class="news-content">
+                        <span class="date">05.09.2026</span>
 
+                        <h3>
+                            Maktab kutubxonasi yangilandi
+                        </h3>
 
-/* ================================
-   GALLERY
-================================ */
+                        <p>
+                            Kutubxonamiz yangi kitoblar bilan boyitildi.
+                        </p>
 
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-}
+                        <a href="#">Batafsil →</a>
+                    </div>
+                </article>
 
-.gallery-item {
-    min-height: 210px;
-    border-radius: 18px;
-    background: linear-gradient(135deg, #dceaff, #f3f7ff);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 60px;
-    overflow: hidden;
-    transition: 0.3s;
-}
+            </div>
 
-.gallery-item:hover {
-    transform: scale(1.02);
-}
+        </div>
+    </section>
 
-.gallery-item span {
-    margin-top: 10px;
-    font-size: 15px;
-    font-weight: 700;
-    color: #23436e;
-}
 
+    <!-- TEACHERS -->
 
-/* ================================
-   CONTACT
-================================ */
 
-.contact-section {
-    background: white;
-}
+        </div>
+    </div>
+</section>
 
-.contact-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-}
 
-.contact-card {
-    text-align: center;
-    padding: 35px 20px;
-    background: #f5f8fc;
-    border-radius: 18px;
-}
+    <!-- GALLERY -->
+    <section id="gallery" class="section light">
+        <div class="container">
 
-.contact-icon {
-    font-size: 35px;
-    margin-bottom: 15px;
-}
+            <div class="section-title">
+                <span>Foto lavhalar</span>
+                <h2>Galereya</h2>
+                <p>
+                    Maktabimiz hayotidan lavhalar
+                </p>
+            </div>
 
-.contact-card p {
-    color: #748096;
-    margin-top: 5px;
-}
+            <div class="gallery">
 
+                <div class="gallery-item">
+                    <div>🏫</div>
+                    <span>Maktab binosi</span>
+                </div>
 
-/* ================================
-   FOOTER
-================================ */
+                <div class="gallery-item">
+                    <div>🎓</div>
+                    <span>Tadbirlar</span>
+                </div>
 
-.footer {
-    background: #0d1d36;
-    color: white;
-    padding: 45px 0 20px;
-}
+                <div class="gallery-item">
+                    <div>📚</div>
+                    <span>Dars jarayoni</span>
+                </div>
 
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    padding-bottom: 30px;
-}
+                <div class="gallery-item">
+                    <div>🏆</div>
+                    <span>Musobaqalar</span>
+                </div>
 
-.footer h2 {
-    font-size: 20px;
-}
+                <div class="gallery-item">
+                    <div>👨‍🎓</div>
+                    <span>O‘quvchilar</span>
+                </div>
 
-.footer p {
-    color: #9caac0;
-    margin-top: 5px;
-}
+                <div class="gallery-item">
+                    <div>🎉</div>
+                    <span>Maktab tadbirlari</span>
+                </div>
 
-.footer-links {
-    display: flex;
-    gap: 25px;
-    flex-wrap: wrap;
-}
+            </div>
 
-.footer-links a {
-    color: #b9c5d5;
-    font-size: 14px;
-}
+        </div>
+    </section>
 
-.footer-links a:hover {
-    color: white;
-}
 
-.copyright {
-    border-top: 1px solid rgba(255,255,255,0.1);
-    padding-top: 20px;
-    color: #8290a5;
-    font-size: 13px;
-    text-align: center;
-}
+    <!-- CONTACT -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
 
+            <div class="section-title">
+                <span>Biz bilan bog‘laning</span>
+                <h2>Aloqa</h2>
+                <p>
+                    Savollaringiz bo‘lsa, biz bilan bog‘laning
+                </p>
+            </div>
 
-/* ================================
-   RESPONSIVE
-================================ */
+            <div class="contact-grid">
 
-@media (max-width: 950px) {
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <h3>Manzil</h3>
+                    <p>
+                        Toshkent viloyati Yangiyo'l tumani Qirariq mahallasi 
+                    </p>
+                </div>
 
-    nav {
-        gap: 12px;
+                <div class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <h3>Telefon</h3>
+                    <p>
+                        +998 97 477 92 88
+                    </p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">✉️</div>
+                    <h3>Email</h3>
+                    <p>
+                        58maktabinfo@gmail.com
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+
+            <div class="footer-content">
+
+                <div>
+                    <h2>58-MAKTAB</h2>
+                    <p>
+                        Bilim va kelajak sari!
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <a href="#home">Bosh sahifa</a>
+                    <a href="#about">Biz haqimizda</a>
+                    <a href="#news">Yangiliklar</a>
+                    <a href="#contact">Bog‘lanish</a>
+                </div>
+
+            </div>
+
+            <div class="copyright">
+                © 2026 58-MAKTAB. Barcha huquqlar himoyalangan.
+            </div>
+
+        </div>
+    </footer>
+
+    ```html
+<!-- USTOZLAR OYNASI -->
+<div class="teacher-modal" id="teacherModal">
+    <div class="teacher-modal-content">
+
+        <button class="teacher-close" onclick="closeTeacherModal()">×</button>
+
+        <h2>Tajribali ustozlar</h2>
+
+        <p class="teacher-modal-subtitle">
+            58-MAKTAB o‘qituvchilari
+        </p>
+
+        <div class="teacher-modal-list">
+
+            <div class="teacher-modal-item">
+                <strong>Vohidova Munisa</strong>
+                <span>Ingliz tili  fani o‘qituvchisi</span>
+            </div>
+
+            <div class="teacher-modal-item">
+                <strong>Hamroyeva Feruza</strong>
+                <span>Informatika fani  o‘qituvchisi</span>
+            </div>
+
+            <div class="teacher-modal-item">
+                <strong>Rashidova Nodira</strong>
+                <span>Boshlang'ich ta'lim fani o‘qituvchisi</span>
+            </div>
+
+            <div class="teacher-modal-item">
+                <strong>Saydazimov Oybek</strong>
+                <span>Tasviriy san'at va Chizmachilik fani o‘qituvchisi</span>
+                </div>
+
+            <div class="teacher-modal-item">
+                <strong>Rashidova Nodira</strong>
+                <span>Boshlang'ich ta'lim fani o‘qituvchisi</span>
+                </div>
+
+            <div class="teacher-modal-item">
+                <strong>Namazbaeva Nargiza</strong>
+                <span>Ingliz tili fani o‘qituvchisi</span>
+                </div>
+
+            <div class="teacher-modal-item">
+                <strong>Imomova Mehriniso</strong>
+                <span>Ingliz tili fani o‘qituvchisi</span>
+                </div>
+                
+            <div class="teacher-modal-item">
+                <strong>Jalilova Maftuna</strong>
+                <span>Fizika va matematika fani o‘qituvchisi</span>
+                </div>
+                
+            <div class="teacher-modal-item">
+                <strong>Mahmudova Sevara</strong>
+                <span>Boshlang'ich ta'lim fani o‘qituvchisi</span>
+                </div>
+                
+            <div class="teacher-modal-item">
+                <strong>Normurodova Nigora</strong>
+                <span>Tarix fani o‘qituvchisi</span> 
+                </div>
+                
+            <div class="teacher-modal-item">
+                <strong>Ashurova Feruza</strong>
+                <span>Boshlang'ich ta'lim va kimyo fani o‘qituvchisi</span>
+                </div>
+                
+            <div class="teacher-modal-item">
+                <strong>Sirliboyeva feruza</strong>
+                <span>Msuiqa madaniyati fani o‘qituvchisi</span>
+                </div>
+                
+            <div class="teacher-modal-item">
+                <strong>Toshmatova Dilafruz</strong>
+                <span>Psixolog va Biologiya fani o‘qituvchisi</span>
+                </div>
+                
+            <div class="teacher-modal-item">
+                <strong>Abduvafoyeva Zulfizar</strong>
+                <span> Kutubxonachi</span> 
+                </div>
+                
+            <div class="teacher-modal-item">
+                <strong>Yoqubova Zebuniso</strong>
+                <span>Ona tili va Adabiyot fani o‘qituvchisi</span> 
+                </div>
+                
+            <div class="teacher-modal-item">
+                <strong>Muydinova Novbahor</strong>
+                <span>Texnologiya fani o‘qituvchisi</span> 
+                </div>
+                
+            <div class="teacher-modal-item">
+                <strong>Isoqova Komila</strong>
+                <span>Bilogiya va Kimyo fani o‘qituvchisi</span> 
+                </div>
+                
+            <div class="teacher-modal-item">
+                <strong>Gaibova Ibodat</strong>
+                <span>Ona tili va Adabiyot fani o‘qituvchisi</span> 
+                </div>
+                
+            <div class="teacher-modal-item">
+                <strong>Isayeva Sitora</strong>
+                <span>Ingliz tili fani o‘qituvchisi</span>
+                </div> 
+                
+            <div class="teacher-modal-item">
+                <strong>Begimova Flora</strong>
+                <span>Matematika fani o‘qituvchisi</span>
+                </div>     
+
+            <div class="teacher-modal-item">
+                <strong>Shukurova Tursunoy</strong>
+                <span>Matematika fani o‘qituvchisi</span>
+                </div>    
+                
+            <div class="teacher-modal-item">
+                <strong>Orinova Nargiza</strong>
+                <span>Matematika fani o‘qituvchisi</span>
+                </div>    
+                
+            <div class="teacher-modal-item">
+                <strong>Xudoyberdiyeva Shaxnoza</strong>
+                <span>Boshlang'ich ta'lim fani o‘qituvchisi</span>  
+                </div>  
+                
+            <div class="teacher-modal-item">
+                <strong>Narbayeva Nilufar</strong>
+                <span>Informatika fani o‘qituvchisi</span>
+                </div>    
+                
+            <div class="teacher-modal-item">
+                <strong>Shoymardonova Nigora</strong>
+                <span>Ona tili va Adabiyot fani o‘qituvchisi</span> 
+                </div>   
+               
+            <div class="teacher-modal-item">
+                <strong>Shaymardanova Meruert</strong>
+                <span>Boshlang'ich ta'lim fani o‘qituvchisi</span> 
+                </div>   
+                
+            <div class="teacher-modal-item">
+                <strong>Rashidova Nodira</strong>
+                <span>Rus tili fani o‘qituvchisi</span>
+                </div>    
+               
+            <div class="teacher-modal-item">
+                <strong>Soyibova Dilovar</strong>
+                <span>Geografiya fani o‘qituvchisi</span>
+                </div>    
+                
+            <div class="teacher-modal-item">
+                <strong>Chorshanbiyeva Munisa</strong>
+                <span>Tarix fani o‘qituvchisi</span>
+                </div>    
+                
+           <div class="teacher-modal-item">
+                <strong>Yarbekova Mashhura</strong>
+                <span>Boshlang'ich ta'lim fani o‘qituvchisi</span>
+                </div>   
+                
+            <div class="teacher-modal-item">
+                <strong>Qoziyeva Durdona</strong>
+                <span>Boshlang'ich ta'lim fani o‘qituvchisi</span> 
+                </div> 
+                
+            <div class="teacher-modal-item">
+                <strong>Xalilova Charos</strong>
+                <span>Tarix fani o‘qituvchisi</span>
+                </div>      
+                
+
+
+
+        </div>
+    </div>
+</div>
+
+<script>
+function openTeacherModal() {
+    document.getElementById("teacherModal").classList.add("active");
+}
+
+function closeTeacherModal() {
+    document.getElementById("teacherModal").classList.remove("active");
+}
+
+document.getElementById("teacherModal").addEventListener("click", function(event) {
+    if (event.target === this) {
+        closeTeacherModal();
     }
+});
+</script>
+```
 
-    nav a {
-        font-size: 12px;
-    }
-
-    .about-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .teachers-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .news-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-
-@media (max-width: 700px) {
-
-    .nav {
-        flex-direction: column;
-        padding: 15px 0;
-    }
-
-    nav {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .hero {
-        min-height: 550px;
-    }
-
-    .hero h1 {
-        letter-spacing: -1px;
-    }
-
-    .hero p {
-        font-size: 18px;
-    }
-
-    .section {
-        padding: 70px 0;
-    }
-
-    .section-title h2 {
-        font-size: 30px;
-    }
-
-    .about-cards {
-        grid-template-columns: 1fr;
-    }
-
-    .stats-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
-    }
-
-    .stat {
-        border-right: none;
-    }
-
-    .news-grid,
-    .teachers-grid,
-    .gallery,
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .footer-content {
-        flex-direction: column;
-    }
-}
-
-.teacher-card-click {
-    cursor: pointer;
-}
-
-.teacher-card-click:hover {
-    transform: translateY(-6px);
-}
-
-/* USTOZLAR MODAL OYNASI */
-.teacher-modal {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.55);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    z-index: 9999;
-}
-
-.teacher-modal.active {
-    display: flex;
-}
-
-.teacher-modal-content {
-    width: min(700px, 100%);
-    max-height: 85vh;
-    overflow-y: auto;
-    background: white;
-    border-radius: 22px;
-    padding: 35px;
-    position: relative;
-    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25);
-}
-
-.teacher-modal-content h2 {
-    color: #13284c;
-    font-size: 30px;
-    margin-bottom: 5px;
-}
-
-.teacher-modal-subtitle {
-    color: #748096;
-    margin-bottom: 25px;
-}
-
-.teacher-close {
-    position: absolute;
-    top: 15px;
-    right: 18px;
-    width: 40px;
-    height: 40px;
-    border: none;
-    border-radius: 50%;
-    background: #f1f4f8;
-    color: #13284c;
-    font-size: 28px;
-    cursor: pointer;
-}
-
-.teacher-close:hover {
-    background: #e4e9f0;
-}
-
-.teacher-modal-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-}
-
-.teacher-modal-item {
-    padding: 20px;
-    background: #f5f8fc;
-    border: 1px solid #e5eaf1;
-    border-radius: 14px;
-}
-
-.teacher-modal-item strong {
-    display: block;
-    color: #13284c;
-    font-size: 16px;
-    margin-bottom: 6px;
-}
-
-.teacher-modal-item span {
-    color: #748096;
-    font-size: 14px;
-}
-
-@media (max-width: 700px) {
-    .teacher-modal-list {
-        grid-template-columns: 1fr;
-    }
-
-    .teacher-modal-content {
-        padding: 25px;
-    }
-}
+</body>
+</html>
 ```
