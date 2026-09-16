@@ -14,129 +14,130 @@
     <div class="top-background">
 
         <!-- HEADER -->
-    <header class="header">
-        <div class="container nav">
+        <header class="header">
+            <div class="container nav">
 
-            <div class="logo">
-                <div class="logo-icon">58</div>
-                <div>
-                    <h2>58-MAKTAB</h2>
-                    <span>Umumiy o‘rta ta’lim maktabi</span>
+                <div class="logo">
+                    <div class="logo-icon">58</div>
+                    <div>
+                        <h2>58-MAKTAB</h2>
+                        <span>Umumiy o‘rta ta’lim maktabi</span>
+                    </div>
+                </div>
+
+                <nav>
+                    <a href="#home">Bosh sahifa</a>
+                    <a href="#about">Maktab haqida</a>
+                    <a href="#news">Yangiliklar</a>
+                    <a href="#teachers">O‘qituvchilar</a>
+                    <a href="#gallery">Galereya</a>
+                    <a href="#contact">Bog‘lanish</a>
+                </nav>
+
+            </div>
+        </header>
+
+
+        <!-- HERO -->
+        <section id="home" class="hero">
+            <div class="hero-overlay"></div>
+
+            <script>
+                window.addEventListener("scroll", () => {
+                    const bg = document.querySelector(".top-background");
+                    if (!bg) return;
+
+                    const scrollY = window.scrollY;
+                    const zoom = 100 + Math.min(scrollY * 0.035, 35);
+
+                    bg.style.backgroundSize = `${zoom}% auto`;
+                });
+            </script>
+
+            <div class="container hero-content">
+                <span class="hero-label">Xush kelibsiz!</span>
+
+                <h1>
+                    58-MAKTAB
+                </h1>
+
+                <p>
+                    Bilim, tarbiya va kelajak sari birgalikda!
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#about" class="btn primary">Maktab haqida</a>
+                    <a href="#contact" class="btn secondary">Bog‘lanish</a>
                 </div>
             </div>
+        </section>
 
-            <nav>
-                <a href="#home">Bosh sahifa</a>
-                <a href="#about">Maktab haqida</a>
-                <a href="#news">Yangiliklar</a>
-                <a href="#teachers">O‘qituvchilar</a>
-                <a href="#gallery">Galereya</a>
-                <a href="#contact">Bog‘lanish</a>
-            </nav>
-
-        </div>
-    </header>
+    </div>
 
 
-    <!-- HERO -->
-    <section id="home" class="hero">
-        <div class="hero-overlay"></div>
-        <script>
-window.addEventListener("scroll", () => {
-    const bg = document.querySelector(".top-background");
-    if (!bg) return;
+    <!-- ABOUT -->
+    <section id="about" class="section">
+        <div class="container">
 
-    const scrollY = window.scrollY;
-    const zoom = 100 + Math.min(scrollY * 0.035, 35);
-
-    bg.style.backgroundSize = `${zoom}% auto`;
-});
-</script>
-
-        <div class="container hero-content">
-            <span class="hero-label">Xush kelibsiz!</span>
-
-            <h1>
-                58-MAKTAB
-            </h1>
-
-            <p>
-                Bilim, tarbiya va kelajak sari birgalikda!
-            </p>
-
-            <div class="hero-buttons">
-                <a href="#about" class="btn primary">Maktab haqida</a>
-                <a href="#contact" class="btn secondary">Bog‘lanish</a>
+            <div class="section-title">
+                <span>Biz haqimizda</span>
+                <h2>58-MAKTAB</h2>
+                <p>Zamonaviy ta'lim va yuqori natijalar sari</p>
             </div>
+
+            <div class="about-grid">
+
+                <div class="about-text">
+                    <h3>Bizning maktabimiz</h3>
+
+                    <p>
+                        58-sonli umumiy o‘rta ta’lim maktabi o‘quvchilarga
+                        sifatli ta’lim berish, ularning bilim va ko‘nikmalarini
+                        rivojlantirishga xizmat qiladi.
+                    </p>
+
+                    <p>
+                        Maktabimizda tajribali o‘qituvchilar, zamonaviy ta’lim
+                        metodlari va o‘quvchilar uchun qulay sharoitlar mavjud.
+                    </p>
+
+                    <a href="#contact" class="btn primary">
+                        Batafsil ma'lumot
+                    </a>
+                </div>
+
+                <div class="about-cards">
+
+                    <div class="info-card">
+                        <div class="card-icon">🎓</div>
+                        <h3>Sifatli ta'lim</h3>
+                        <p>Zamonaviy va samarali ta'lim usullari.</p>
+                    </div>
+
+                    <div class="info-card teacher-card-click" onclick="openTeacherModal()">
+                        <div class="card-icon">👨‍🏫</div>
+                        <h3>Tajribali ustozlar</h3>
+                        <p>Malakali va fidoyi o‘qituvchilar.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="card-icon">🏆</div>
+                        <h3>Yutuqlar</h3>
+                        <p>O‘quvchilarimizning yuqori natijalari.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="card-icon">📚</div>
+                        <h3>Rivojlanish</h3>
+                        <p>Har bir o‘quvchining kelajagi uchun imkoniyat.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
     </section>
-    </div>
-
-
-    <!-- ABOUT -->
-    <!-- ABOUT -->
-<section id="about" class="section">
-    <div class="container">
-
-        <div class="section-title">
-            <span>Biz haqimizda</span>
-            <h2>58-MAKTAB</h2>
-            <p>Zamonaviy ta'lim va yuqori natijalar sari</p>
-        </div>
-
-        <div class="about-grid">
-
-            <div class="about-text">
-                <h3>Bizning maktabimiz</h3>
-
-                <p>
-                    58-sonli umumiy o‘rta ta’lim maktabi o‘quvchilarga
-                    sifatli ta’lim berish, ularning bilim va ko‘nikmalarini
-                    rivojlantirishga xizmat qiladi.
-                </p>
-
-                <p>
-                    Maktabimizda tajribali o‘qituvchilar, zamonaviy ta’lim
-                    metodlari va o‘quvchilar uchun qulay sharoitlar mavjud.
-                </p>
-
-                <a href="#contact" class="btn primary">
-                    Batafsil ma'lumot
-                </a>
-            </div>
-
-            <div class="about-cards">
-
-                <div class="info-card">
-                    <div class="card-icon">🎓</div>
-                    <h3>Sifatli ta'lim</h3>
-                    <p>Zamonaviy va samarali ta'lim usullari.</p>
-                </div>
-
-                <div class="info-card teacher-card-click" onclick="openTeacherModal()">
-                    <div class="card-icon">👨‍🏫</div>
-                    <h3>Tajribali ustozlar</h3>
-                    <p>Malakali va fidoyi o‘qituvchilar.</p>
-                </div>
-
-                <div class="info-card">
-                    <div class="card-icon">🏆</div>
-                    <h3>Yutuqlar</h3>
-                    <p>O‘quvchilarimizning yuqori natijalari.</p>
-                </div>
-
-                <div class="info-card">
-                    <div class="card-icon">📚</div>
-                    <h3>Rivojlanish</h3>
-                    <p>Har bir o‘quvchining kelajagi uchun imkoniyat.</p>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-</section>
 
 
     <!-- STATISTICS -->
@@ -144,22 +145,26 @@ window.addEventListener("scroll", () => {
         <div class="container stats-grid">
 
             <div class="stat">
-                <strong>58</strong>
+                <div class="stat-emoji school-emoji">🏫</div>
+                <strong id="schoolCount">1</strong>
                 <span>Maktab raqami</span>
             </div>
 
             <div class="stat">
-                <strong>500+</strong>
+                <div class="stat-emoji student-emoji">📚</div>
+                <strong id="studentCount">1</strong>
                 <span>O‘quvchilar</span>
             </div>
 
             <div class="stat">
-                <strong>30+</strong>
+                <div class="stat-emoji teacher-emoji">👨‍🏫</div>
+                <strong id="teacherCount">1</strong>
                 <span>O‘qituvchilar</span>
             </div>
 
             <div class="stat">
-                <strong>20+</strong>
+                <div class="stat-emoji calendar-emoji">📅</div>
+                <strong id="experienceCount">1</strong>
                 <span>Yillik tajriba</span>
             </div>
 
@@ -252,7 +257,6 @@ window.addEventListener("scroll", () => {
 
 
     <!-- TEACHERS -->
-
 
         </div>
     </div>
@@ -381,6 +385,7 @@ window.addEventListener("scroll", () => {
 
         </div>
     </footer>
+
 
 <!-- USTOZLAR OYNASI -->
 <div class="teacher-modal" id="teacherModal">
@@ -546,15 +551,14 @@ window.addEventListener("scroll", () => {
                 <strong>Xalilova Charos</strong>
                 <span>Tarix fani o‘qituvchisi</span>
                 </div>      
-                
-
-
 
         </div>
     </div>
 </div>
 
+
 <script>
+
 function openTeacherModal() {
     document.getElementById("teacherModal").classList.add("active");
 }
@@ -568,7 +572,167 @@ document.getElementById("teacherModal").addEventListener("click", function(event
         closeTeacherModal();
     }
 });
+
+
+/* ================================
+   STATISTICS ANIMATSIYASI
+================================ */
+
+const statsSection = document.querySelector(".stats");
+
+const schoolCount = document.getElementById("schoolCount");
+const studentCount = document.getElementById("studentCount");
+const teacherCount = document.getElementById("teacherCount");
+const experienceCount = document.getElementById("experienceCount");
+
+let statsStarted = false;
+
+
+/* Oddiy sanash funksiyasi */
+
+function countNumber(element, target, duration, suffix = "") {
+
+    return new Promise(resolve => {
+
+        const start = 1;
+        const startTime = performance.now();
+
+        function update(currentTime) {
+
+            const progress = Math.min(
+                (currentTime - startTime) / duration,
+                1
+            );
+
+            const value = Math.floor(
+                start + (target - start) * progress
+            );
+
+            element.textContent =
+                progress >= 1
+                    ? target + suffix
+                    : value;
+
+            if (progress < 1) {
+
+                requestAnimationFrame(update);
+
+            } else {
+
+                resolve();
+
+            }
+        }
+
+        requestAnimationFrame(update);
+    });
+}
+
+
+/* O'quvchilar 1 -> 500+ */
+
+function countStudents() {
+
+    return new Promise(resolve => {
+
+        const target = 500;
+        const duration = 5000;
+        const start = 1;
+
+        const startTime = performance.now();
+
+        function update(currentTime) {
+
+            const progress = Math.min(
+                (currentTime - startTime) / duration,
+                1
+            );
+
+            const value = Math.floor(
+                start + (target - start) * progress
+            );
+
+            studentCount.textContent =
+                value >= 500
+                    ? "500+"
+                    : value;
+
+            if (progress < 1) {
+
+                requestAnimationFrame(update);
+
+            } else {
+
+                studentCount.textContent = "500+";
+
+                resolve();
+
+            }
+        }
+
+        requestAnimationFrame(update);
+    });
+}
+
+
+/* Hammasini boshlash */
+
+function startStatsAnimation() {
+
+    if (statsStarted) return;
+
+    statsStarted = true;
+
+    countNumber(
+        schoolCount,
+        58,
+        2200
+    );
+
+    countStudents();
+
+    countNumber(
+        teacherCount,
+        30,
+        2200,
+        "+"
+    );
+
+    countNumber(
+        experienceCount,
+        4,
+        1800,
+        "+"
+    );
+}
+
+
+/* Statistikalar ekranga kelganda boshlanadi */
+
+if (statsSection) {
+
+    const observer = new IntersectionObserver(
+        function(entries) {
+
+            if (entries[0].isIntersecting) {
+
+                startStatsAnimation();
+
+                observer.disconnect();
+            }
+
+        },
+        {
+            threshold: 0.3
+        }
+    );
+
+    observer.observe(statsSection);
+}
+
 </script>
+
+
 <div class="site-creator">
     <span>Sayt yaratuvchisi</span> —
     <strong>Xusniddinov Nodirbek</strong>
