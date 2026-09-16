@@ -129,33 +129,49 @@ nav a:hover {
     position: relative;
     z-index: 2;
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
+/* 58-MAKTAB tepada */
+.hero h1 {
+    order: 1;
+    font-size: clamp(50px, 8vw, 92px);
+    line-height: 1;
+    margin-bottom: 8px;
+    letter-spacing: -3px;
+    transform: translateY(-40px);
+}
+
+/* Bilim yozuvi 58-MAKTAB tagida */
+.hero p {
+    order: 2;
+    font-family: "Brush Script MT", "Segoe Script", cursive;
+    font-weight: 700;
+    color: white;
+    font-size: 28px;
+    max-width: 600px;
+    margin-bottom: 75px;
+    transform: translateY(-70px);
+}
+
+/* Xush kelibsiz pastroqda va kattaroq */
 .hero-label {
+    order: 3;
     display: inline-block;
     padding: 7px 16px;
     border-radius: 50px;
     background: rgba(255,255,255,0.15);
     border: 1px solid rgba(255,255,255,0.2);
     margin-bottom: 20px;
-    font-size: 14px;
+    font-size: 32px;
+    font-weight: 700;
 }
 
-.hero h1 {
-    font-size: clamp(50px, 8vw, 92px);
-    line-height: 1;
-    margin-bottom: 22px;
-    letter-spacing: -3px;
-}
-
-.hero p {
-    font-size: 22px;
-    color: #dceaff;
-    max-width: 600px;
-    margin-bottom: 35px;
-}
-
+/* Tugmalar */
 .hero-buttons {
+    order: 4;
     display: flex;
     gap: 14px;
     flex-wrap: wrap;
@@ -260,6 +276,9 @@ nav a:hover {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 18px;
+    align-items: start;
+    align-content: start;
+    grid-auto-rows: max-content;
 }
 
 .info-card {
@@ -268,6 +287,7 @@ nav a:hover {
     background: white;
     border: 1px solid #e7ecf3;
     transition: 0.3s;
+    box-sizing: border-box;
 }
 
 .info-card:hover {
