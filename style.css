@@ -1,4 +1,3 @@
-```css
 /* ================================
    UMUMIY
 ================================ */
@@ -34,6 +33,7 @@ a {
 /* ================================
    HEADER
 ================================ */
+
 .top-background {
     background-image: url("Maktab.png");
     background-size: 100% auto;
@@ -115,7 +115,6 @@ nav a:hover {
     position: relative;
     display: flex;
     align-items: center;
-
 }
 
 .hero-overlay {
@@ -136,17 +135,15 @@ nav a:hover {
     align-items: flex-start;
 }
 
-/* 58-MAKTAB tepada */
 .hero h1 {
     order: 1;
     font-size: clamp(50px, 8vw, 92px);
     line-height: 1;
     margin-bottom: 8px;
     letter-spacing: -3px;
-    transform: translateY(-40px);
+    transform: translateY(-250px);
 }
 
-/* Bilim yozuvi 58-MAKTAB tagida */
 .hero p {
     order: 2;
     font-family: "Brush Script MT", "Segoe Script", cursive;
@@ -155,10 +152,9 @@ nav a:hover {
     font-size: 28px;
     max-width: 600px;
     margin-bottom: 75px;
-    transform: translateY(-70px);
+    transform: translateY(-240px);
 }
 
-/* Xush kelibsiz pastroqda va kattaroq */
 .hero-label {
     order: 3;
     display: inline-block;
@@ -171,7 +167,6 @@ nav a:hover {
     font-weight: 700;
 }
 
-/* Tugmalar */
 .hero-buttons {
     order: 4;
     display: flex;
@@ -330,6 +325,8 @@ nav a:hover {
 
 .stat {
     border-right: 1px solid rgba(255,255,255,0.15);
+    position: relative;
+    padding: 10px 20px;
 }
 
 .stat:last-child {
@@ -339,11 +336,177 @@ nav a:hover {
 .stat strong {
     display: block;
     font-size: 38px;
+    text-shadow:
+        0 0 5px rgba(255,255,255,0.5),
+        0 0 15px rgba(80,160,255,0.7);
 }
 
 .stat span {
     color: #bdd5f4;
     font-size: 14px;
+}
+
+
+/* ================================
+   STATISTICS EMOJILAR
+================================ */
+
+.stat-emoji {
+    display: inline-block;
+    font-size: 42px;
+    line-height: 1;
+    margin-bottom: 10px;
+
+    filter:
+        drop-shadow(0 0 5px rgba(255,255,255,0.8))
+        drop-shadow(0 0 15px rgba(80,160,255,0.8));
+
+    animation: emojiGlow 1.5s ease-in-out infinite;
+}
+
+
+/* Maktab */
+
+.school-emoji {
+    animation:
+        schoolMove 1.8s ease-in-out infinite,
+        emojiGlow 1.5s ease-in-out infinite;
+}
+
+
+/* O'quvchilar */
+
+.student-emoji {
+    animation:
+        studentMove 1.2s ease-in-out infinite,
+        emojiGlow 1.5s ease-in-out infinite;
+}
+
+
+/* O'qituvchilar */
+
+.teacher-emoji {
+    animation:
+        teacherMove 1.4s ease-in-out infinite,
+        emojiGlow 1.5s ease-in-out infinite;
+}
+
+
+/* Kalendar */
+
+.calendar-emoji {
+    animation:
+        calendarMove 1.5s ease-in-out infinite,
+        emojiGlow 1.5s ease-in-out infinite;
+}
+
+
+/* ================================
+   GLOW
+================================ */
+
+@keyframes emojiGlow {
+
+    0%, 100% {
+        filter:
+            drop-shadow(0 0 4px rgba(255,255,255,0.5))
+            drop-shadow(0 0 10px rgba(80,150,255,0.5));
+    }
+
+    50% {
+        filter:
+            drop-shadow(0 0 8px rgba(255,255,255,1))
+            drop-shadow(0 0 22px rgba(80,160,255,1))
+            drop-shadow(0 0 40px rgba(80,160,255,0.7));
+    }
+}
+
+
+/* ================================
+   MAKTAB ANIMATSIYA
+================================ */
+
+@keyframes schoolMove {
+
+    0%, 100% {
+        transform: translateY(0) rotate(0deg) scale(1);
+    }
+
+    25% {
+        transform: translateY(-6px) rotate(-4deg) scale(1.05);
+    }
+
+    50% {
+        transform: translateY(0) rotate(0deg) scale(1.10);
+    }
+
+    75% {
+        transform: translateY(-6px) rotate(4deg) scale(1.05);
+    }
+}
+
+
+/* ================================
+   KITOB ANIMATSIYA
+================================ */
+
+@keyframes studentMove {
+
+    0%, 100% {
+        transform: translateY(0) rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: translateY(-8px) rotate(-4deg) scale(1.10);
+    }
+}
+
+
+/* ================================
+   O'QITUVCHI ANIMATSIYA
+================================ */
+
+@keyframes teacherMove {
+
+    0%, 100% {
+        transform: translateY(0) rotate(0deg) scale(1);
+    }
+
+    25% {
+        transform: translateY(-6px) rotate(-5deg) scale(1.05);
+    }
+
+    50% {
+        transform: translateY(0) rotate(0deg) scale(1.08);
+    }
+
+    75% {
+        transform: translateY(-6px) rotate(5deg) scale(1.05);
+    }
+}
+
+
+/* ================================
+   KALENDAR ANIMATSIYA
+================================ */
+
+@keyframes calendarMove {
+
+    0%, 100% {
+        transform: translateY(0) rotate(0deg) scale(1);
+    }
+
+    25% {
+        transform: translateY(-6px) rotate(-4deg) scale(1.04);
+    }
+
+    50% {
+        transform: translateY(0) rotate(4deg) scale(1.08);
+    }
+
+    75% {
+        transform: translateY(-6px) rotate(-4deg) scale(1.04);
+    }
 }
 
 
@@ -636,6 +799,10 @@ nav a:hover {
         border-right: none;
     }
 
+    .stat-emoji {
+        font-size: 36px;
+    }
+
     .news-grid,
     .teachers-grid,
     .gallery,
@@ -648,6 +815,11 @@ nav a:hover {
     }
 }
 
+
+/* ================================
+   USTOZLAR KARTASI
+================================ */
+
 .teacher-card-click {
     cursor: pointer;
 }
@@ -656,7 +828,9 @@ nav a:hover {
     transform: translateY(-6px);
 }
 
+
 /* USTOZLAR MODAL OYNASI */
+
 .teacher-modal {
     position: fixed;
     inset: 0;
@@ -738,6 +912,7 @@ nav a:hover {
 }
 
 @media (max-width: 700px) {
+
     .teacher-modal-list {
         grid-template-columns: 1fr;
     }
@@ -746,6 +921,12 @@ nav a:hover {
         padding: 25px;
     }
 }
+
+
+/* ================================
+   SITE CREATOR
+================================ */
+
 .site-creator {
     position: relative;
     text-align: center;
@@ -760,7 +941,6 @@ nav a:hover {
     overflow: hidden;
 }
 
-/* Yuqoridagi premium chiziq */
 .site-creator::before {
     content: "";
     position: absolute;
@@ -777,7 +957,6 @@ nav a:hover {
     );
 }
 
-/* Pastdagi glow */
 .site-creator::after {
     content: "";
     position: absolute;
@@ -826,7 +1005,6 @@ nav a:hover {
 }
 
 .site-creator:hover {
-    /* umumiy joy kattalashmaydi */
 }
 
 .site-creator strong:hover {
@@ -835,6 +1013,7 @@ nav a:hover {
         0 0 8px rgba(255, 255, 255, 0.7),
         0 0 20px rgba(90, 150, 255, 0.6);
 }
+
 .site-creator span {
     display: inline-block;
     transition: all 0.25s ease;
